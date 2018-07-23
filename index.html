@@ -15,7 +15,17 @@
     <header>
         <div class="main-wrapper">
             <div class="left-menu">
-                <div class="burger-menu"></div>
+                <div class="burger-menu">
+                    <a href="#" class="menu-btn">
+                        <span></span>
+                    </a>
+                    <nav class="nav none">
+                        <a class="nav-item" href="#">Заявки</a>
+                        <a class="nav-item" href="#">Документы</a>
+                        <a class="nav-item" href="#">О сервисе</a>
+                        <a class="nav-item" href="#">Агенство</a>
+                    </nav>
+                </div>
                 <div class="logo">
                     <a href="index.html">
                         <img src="./img/logo.svg" alt="Logo">
@@ -29,8 +39,8 @@
                 <a href="#">Агенство</a>
             </div>
             <div class="right-menu">
-                <a class="lk-link" href="lk.html">Привет, Александра!</a>
-                <ul class="submenu">
+                <a class="lk-link" href="#">Привет, Александра!</a>
+                <ul class="submenu none">
                     <li>
                         <a href="#">Купить квартиру</a>
                     </li>
@@ -54,7 +64,9 @@
                 <a href="#">Вход и регистрация</a>
             </nav>
             <section class="main-banner">
-                <div class="image-inner mob-visible"></div>
+                <div class="image-inner mob-visible">
+                    <img src="./img/main.jpg" alt="">
+                </div>
                 <div class="info-block">
                     <h1>Хотите гарантированно получить одобрение банка на ипотеку?</h1>
                     <p>Оставьте заявку, и мы подберем лучшее предложение. Это бесплатно.</p>
@@ -91,7 +103,7 @@
                             <img src="./img/mat.jpg" alt="Использовать материнский капитал">
                             <h3>Использовать материнский капитал</h3>
                         </div>
-                        <ul>
+                        <ul class="opportunity-list">
                             <li>Использовать мат-капитал до исполнения 3 лет второму ребенку</li>
                             <li>Купить квартиру в кредит без первоначального взноса</li>
                             <li>Сэкономить на % по кредиту для использования мат капитала</li>
@@ -105,7 +117,7 @@
                             <img src="./img/buy.jpg" alt="Купить готовую квартиру">
                             <h3>Купить готовую квартиру или построить дом</h3>
                         </div>
-                        <ul>
+                        <ul class="opportunity-list">
                             <li>Одобрение ипотеки во всех банках, в одном окне.</li>
                             <li>Скидка на ипотеку до 1,5% при одобрении кредита у нас</li>
                             <li>Ипотека без первоначального взноса или с рассрочкой платежа </li>
@@ -119,7 +131,7 @@
                             <img src="./img/sert.jpg" alt="Использовать военные, жилищные и др сертификаты">
                             <h3>Использовать военные, жилищные и др сертификаты</h3>
                         </div>
-                        <ul>
+                        <ul class="opportunity-list">
                             <li>Получите максимальный кредит по военной ипотеке</li>
                             <li>Сравните кредитные ставки всех банков в одном месте</li>
                             <li>База квартир, подходящих под сертификаты, от наших партнеров</li>
@@ -167,7 +179,7 @@
             <section class="calc-wrapper">
                 <div class="calc-block">
                     <h5>Посчитайте сколько вы сэкономите на кредите, с нашей помощью</h5>
-                    <form action="">
+                    <form action="" class="calc">
                         <div class="col-wrap">
                             <div class="field-wrap">
                                 <label for="email">Электронная почта</label>
@@ -248,6 +260,8 @@
             <p class="copyright">© 2018, АО &laquo;Одобри.оналйн&raquo;, официальный сайт, лицензия ЦБ РФ № 2673</p>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -44,7 +44,8 @@ body h5 {
   font-weight: 300;
   line-height: 1.1875;
 }
-body h2, body h3 {
+body h2,
+body h3 {
   text-align: center;
 }
 body p {
@@ -75,25 +76,102 @@ body .check-input::before {
 body .check-input:hover::before {
   border-color: #56ccf2;
 }
-body .flex, body main .main-banner .info-block .triggers, body header .main-wrapper,
-body .footer,
-body .opportunity-block,
-body .advantages-row {
+body .flex, body main .calc-wrapper .calc .col-wrap, main .calc-wrapper .calc body .col-wrap, body main .calc-wrapper .calc, main .calc-wrapper body .calc, body main .calc-wrapper, main body .calc-wrapper, body main .advantages-row, main body .advantages-row,
+body main .opportunity-block,
+main body .opportunity-block, body main .main-banner .info-block .triggers, main .main-banner .info-block body .triggers, body header .left-menu, header body .left-menu, body header .main-wrapper,
+body .footer {
   display: flex;
 }
+body .none {
+  display: none;
+}
 body header .main-wrapper,
-body .footer,
-body .opportunity-block,
-body .advantages-row {
+body .footer {
   justify-content: space-between;
   align-items: center;
   min-height: 78px;
 }
-body header {
+
+header {
   background: #ffffff;
   border-bottom: 1px solid #c9d0d3;
 }
-body header .center-menu a {
+header .left-menu {
+  align-items: center;
+}
+header .left-menu .logo img {
+  zoom: 0.7;
+}
+header .left-menu .burger-menu {
+  position: relative;
+  width: 80px;
+  height: 77px;
+  margin: 0 3% 0 0;
+}
+header .left-menu .menu-btn {
+  display: block;
+  width: 80px;
+  height: 77px;
+  background-color: #fff;
+  position: relative;
+  border-left: 1px solid #c9d0d3;
+  border-right: 1px solid #c9d0d3;
+}
+header .left-menu .menu-btn span,
+header .left-menu .menu-btn span::before,
+header .left-menu .menu-btn span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 2px;
+  background-color: #b9c1c6;
+}
+header .left-menu .menu-btn span::before,
+header .left-menu .menu-btn span::after {
+  content: "";
+  display: block;
+  transition: 0.2s;
+}
+header .left-menu .menu-btn span::before {
+  margin: 30% 0 0;
+}
+header .left-menu .menu-btn span::after {
+  margin: -30% 0 0;
+}
+header .left-menu .menu-btn_active span {
+  height: 0;
+}
+header .left-menu .menu-btn_active span:before,
+header .left-menu .menu-btn_active span:after {
+  transform: rotate(-45deg);
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+header .left-menu .menu-btn_active span:after {
+  transform: rotate(45deg);
+}
+header .left-menu .nav {
+  flex-direction: column;
+  background: #fff;
+  margin: 2% 0;
+  min-width: 300px;
+  box-shadow: 0px 4px 12px 0px rgba(92, 112, 122, 0.3);
+  position: absolute;
+  z-index: 1;
+}
+header .left-menu .nav .nav-item {
+  width: 100%;
+  padding: 5%;
+}
+@media screen and (max-width: 600px) {
+  header .center-menu {
+    display: none;
+  }
+}
+header .center-menu a {
   font-size: 16px;
   font-weight: bold;
   color: #5c707a;
@@ -102,15 +180,15 @@ body header .center-menu a {
   margin: 0 5px;
   display: inline-block;
 }
-body header .right-menu a {
+header .right-menu a {
   color: #5c707a;
   display: inline-block;
 }
-body header .right-menu .lk-link {
+header .right-menu .lk-link {
   position: relative;
   padding: 15% 0;
 }
-body header .right-menu .lk-link::after {
+header .right-menu .lk-link::after {
   content: "›";
   color: inherit;
   transform: rotate(90deg);
@@ -120,42 +198,44 @@ body header .right-menu .lk-link::after {
   top: 50%;
   margin: 0 5%;
 }
-body header .right-menu .lk-link:hover + .submenu {
-  display: block;
-}
-body header .right-menu .submenu {
-  display: none;
+header .right-menu .submenu {
   list-style: none;
+  flex-direction: column;
   padding: 0;
   background: #fff;
   z-index: 1;
   position: absolute;
   right: 5%;
-  top: 10%;
+  top: 22%;
   min-width: 310px;
   min-height: 192px;
   box-shadow: 0px 4px 12px 0px rgba(92, 112, 122, 0.3);
 }
-body header .right-menu .submenu li a {
+header .right-menu .submenu li a {
   padding: 17px 30px;
+  width: 100%;
 }
-body main .breadcrumbs {
+
+main .breadcrumbs {
   margin: 14px 0;
 }
-body main .breadcrumbs a {
+main .breadcrumbs a {
   margin-right: 14px;
   position: relative;
   color: #173342;
 }
-body main .breadcrumbs a::after {
+main .breadcrumbs a::after {
   content: "›";
   position: absolute;
   margin: 0 13%;
 }
-body main .breadcrumbs a:last-child::after {
+main .breadcrumbs a:last-child::after {
   content: "";
 }
-body main .btn {
+main h1 {
+  margin-top: 0;
+}
+main .btn {
   display: inline-block;
   background: #56ccf2;
   color: #ffffff;
@@ -168,18 +248,23 @@ body main .btn {
   cursor: pointer;
   font-size: 18px;
 }
-body main .field-wrap {
+main .field-wrap {
   width: 47%;
   display: inline-block;
   margin: 0 15px 40px 0;
 }
-body main .field-wrap label {
+@media screen and (max-width: 600px) {
+  main .field-wrap {
+    width: 100%;
+  }
+}
+main .field-wrap label {
   position: absolute;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.3333333333;
 }
-body main .field-wrap input {
+main .field-wrap input {
   position: relative;
   background: transparent;
   border: 0;
@@ -188,27 +273,50 @@ body main .field-wrap input {
   color: #c9d0d3;
   border-bottom: 1px solid #c9d0d3;
 }
-body main .main-banner {
+main .mob-visible {
+  display: none;
+}
+main .mob-visible img {
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  main .mob-visible {
+    display: block;
+  }
+}
+main .main-banner {
   background: url("../img/main.jpg") left no-repeat;
   min-height: 570px;
   position: relative;
 }
-body main .main-banner .info-block {
+@media screen and (max-width: 600px) {
+  main .main-banner {
+    background: none;
+  }
+}
+main .main-banner .info-block {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translate(0, -50%);
   width: 55%;
 }
-body main .main-banner .info-block form {
+@media screen and (max-width: 600px) {
+  main .main-banner .info-block {
+    width: 100%;
+    position: unset;
+    transform: none;
+  }
+}
+main .main-banner .info-block form {
   position: relative;
 }
-body main .main-banner .info-block form .btn {
+main .main-banner .info-block form .btn {
   position: absolute;
   left: 0;
   transform: translate(0, 50%);
 }
-body main .main-banner .info-block .triggers {
+main .main-banner .info-block .triggers {
   list-style: none;
   justify-content: space-between;
   align-items: flex-start;
@@ -217,53 +325,50 @@ body main .main-banner .info-block .triggers {
   width: 50%;
   right: 0;
 }
-body main .main-banner .info-block .triggers li {
+@media screen and (max-width: 600px) {
+  main .main-banner .info-block .triggers {
+    width: 100%;
+    position: unset;
+  }
+}
+main .main-banner .info-block .triggers li {
   max-width: 166px;
 }
-body main .main-banner .info-block .triggers li .heading-list {
+main .main-banner .info-block .triggers li .heading-list {
   color: #173342;
   font-weight: bold;
   font-size: 18px;
 }
-body main .opportunity-block {
-  padding: 38px 20px;
+main .opportunity-block {
+  padding: 0 20px;
 }
-body main .opportunity-block .opportunity-item {
+main .opportunity-block .opportunity-item {
   max-width: 330px;
   min-height: 590px;
   padding: 20px;
 }
-body main .opportunity-block .opportunity-item:hover {
+main .opportunity-block .opportunity-item:hover {
   background-color: #ffffff;
   box-shadow: 0px 4px 12px 0px rgba(92, 112, 122, 0.3);
-  border-radius: 2%;
+  border-radius: 4%;
   cursor: pointer;
 }
-body main .opportunity-block .opportunity-item .opportunity-image {
+main .opportunity-block .opportunity-item:hover .btn-link {
+  background: #56ccf2;
+  color: #ffffff;
+  border: 0;
+  box-shadow: 0px 8px 24px 0px rgba(86, 204, 242, 0.25);
+}
+main .opportunity-block .opportunity-item .opportunity-image {
   position: relative;
 }
-body main .opportunity-block .opportunity-item .opportunity-image h3 {
+main .opportunity-block .opportunity-item .opportunity-image h3 {
   position: absolute;
   bottom: 0;
   margin: 0;
   line-height: 1.2222222222;
 }
-body main .opportunity-block .opportunity-item ul {
-  list-style: none;
-  padding: 0;
-}
-body main .opportunity-block .opportunity-item ul li {
-  line-height: 1.5714285714;
-  position: relative;
-  padding: 0 0 15px 34px;
-}
-body main .opportunity-block .opportunity-item ul li::before {
-  content: "✓";
-  color: #b1d559;
-  position: absolute;
-  left: 3%;
-}
-body main .opportunity-block .opportunity-item .btn-link {
+main .opportunity-block .opportunity-item .btn-link {
   text-align: center;
   text-transform: uppercase;
   font-size: 16px;
@@ -273,6 +378,123 @@ body main .opportunity-block .opportunity-item .btn-link {
   border-radius: 6px;
   max-height: 54px;
   padding: 5% 0;
+}
+main .opportunity-list, main .privilege-wrapper .privilege-list {
+  list-style: none;
+  padding: 0;
+}
+main .opportunity-list li, main .privilege-wrapper .privilege-list li {
+  line-height: 1.5714285714;
+  position: relative;
+  padding: 0 0 15px 34px;
+}
+main .opportunity-list li::before, main .privilege-wrapper .privilege-list li::before {
+  content: "✓";
+  color: #b1d559;
+  position: absolute;
+  left: 3%;
+}
+main .advantages-row,
+main .opportunity-block {
+  align-items: flex-start;
+  justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  main .advantages-row,
+main .opportunity-block {
+    flex-direction: column;
+  }
+}
+main .advantages-row .advantages-item,
+main .opportunity-block .advantages-item {
+  padding-left: 69px;
+  position: relative;
+  width: 33.333333%;
+}
+@media screen and (max-width: 600px) {
+  main .advantages-row .advantages-item,
+main .opportunity-block .advantages-item {
+    width: 100%;
+  }
+}
+main .advantages-row .advantages-item h4,
+main .opportunity-block .advantages-item h4 {
+  margin: 0 0 20px;
+}
+main .advantages-row .advantages-item:first-child,
+main .opportunity-block .advantages-item:first-child {
+  background: url("../img/why1.png") no-repeat;
+}
+main .advantages-row .advantages-item:nth-child(2n),
+main .opportunity-block .advantages-item:nth-child(2n) {
+  background: url("../img/why2.png") no-repeat;
+}
+main .advantages-row .advantages-item:nth-child(3n),
+main .opportunity-block .advantages-item:nth-child(3n) {
+  background: url("../img/why3.png") no-repeat;
+}
+main .advantages-row:last-child {
+  justify-content: center;
+}
+main .advantages-row:last-child .advantages-item:first-child {
+  background: url("../img/why4.png") no-repeat;
+}
+main .advantages-row:last-child .advantages-item:last-child {
+  background: url("../img/why5.png") no-repeat;
+}
+main .calc-wrapper {
+  background: url("../img/backf.jpg") no-repeat;
+  max-width: 970px;
+  max-height: 510px;
+  margin: 0 auto;
+  justify-content: flex-end;
+}
+main .calc-wrapper .calc-block {
+  width: 60%;
+}
+main .calc-wrapper .calc .col-wrap {
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 48%;
+}
+main .calc-wrapper .calc .col-wrap .field-wrap {
+  width: 90%;
+  position: relative;
+}
+main .calc-wrapper .calc .check-input {
+  font-size: 14px;
+  padding: 0 0 0 10%;
+}
+main .privilege-wrapper .privilege-list {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+}
+@media screen and (max-width: 600px) {
+  main .privilege-wrapper .privilege-list {
+    width: 100%;
+  }
+}
+main .privilege-wrapper .privilege-list h6 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.1;
+  margin: 0;
+}
+main .privilege-wrapper .privilege-list li::before {
+  zoom: 1.5;
+  left: 0;
+  top: 0;
+  line-height: 1;
+}
+
+footer p {
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  footer .footer {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
