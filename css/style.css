@@ -76,7 +76,7 @@ body .check-input::before {
 body .check-input:hover::before {
   border-color: #56ccf2;
 }
-body .flex, body main .calc-wrapper .calc .col-wrap, main .calc-wrapper .calc body .col-wrap, body main .calc-wrapper .calc, main .calc-wrapper body .calc, body main .calc-wrapper, main body .calc-wrapper, body main .advantages-row, main body .advantages-row,
+body .flex, body main .calc-wrapper .calc .row-wrap, main .calc-wrapper .calc body .row-wrap, body main .calc-wrapper .calc .col-wrap, main .calc-wrapper .calc body .col-wrap, body main .calc-wrapper .calc, main .calc-wrapper body .calc, body main .calc-wrapper, main body .calc-wrapper, body main .advantages-row, main body .advantages-row,
 body main .opportunity-block,
 main body .opportunity-block, body main .main-banner .info-block .triggers, main .main-banner .info-block body .triggers, body header .left-menu, header body .left-menu, body header .main-wrapper,
 body .footer {
@@ -180,13 +180,21 @@ header .center-menu a {
   margin: 0 5px;
   display: inline-block;
 }
+header .right-menu {
+  position: relative;
+}
 header .right-menu a {
   color: #5c707a;
   display: inline-block;
 }
 header .right-menu .lk-link {
-  position: relative;
   padding: 15% 0;
+}
+@media screen and (max-width: 600px) {
+  header .right-menu .lk-link {
+    font-size: smaller;
+    transform: translate(-20%, 0);
+  }
 }
 header .right-menu .lk-link::after {
   content: "›";
@@ -205,8 +213,8 @@ header .right-menu .submenu {
   background: #fff;
   z-index: 1;
   position: absolute;
-  right: 5%;
-  top: 22%;
+  right: 0;
+  margin: 10% 0;
   min-width: 310px;
   min-height: 192px;
   box-shadow: 0px 4px 12px 0px rgba(92, 112, 122, 0.3);
@@ -252,6 +260,9 @@ main .field-wrap {
   width: 47%;
   display: inline-block;
   margin: 0 15px 40px 0;
+}
+main .field-wrap:last-child {
+  margin-right: 0;
 }
 @media screen and (max-width: 600px) {
   main .field-wrap {
@@ -445,20 +456,25 @@ main .advantages-row:last-child .advantages-item:last-child {
 main .calc-wrapper {
   background: url("../img/backf.jpg") no-repeat;
   max-width: 970px;
-  max-height: 510px;
+  min-height: 510px;
   margin: 0 auto;
   justify-content: flex-end;
 }
 main .calc-wrapper .calc-block {
   width: 60%;
 }
+main .calc-wrapper .calc-block h5 {
+  margin: 50px;
+  margin-left: 0;
+}
 main .calc-wrapper .calc .col-wrap {
   flex-direction: column;
   flex-wrap: wrap;
   width: 48%;
+  margin-right: 5%;
 }
 main .calc-wrapper .calc .col-wrap .field-wrap {
-  width: 90%;
+  width: 100%;
   position: relative;
 }
 main .calc-wrapper .calc .check-input {
