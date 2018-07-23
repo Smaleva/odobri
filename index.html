@@ -29,19 +29,27 @@
                 <a href="#">Агенство</a>
             </div>
             <div class="right-menu">
-                <a href="lk.html">Привет, Александра!</a>
+                <a class="lk-link" href="lk.html">Привет, Александра!</a>
                 <ul class="submenu">
-                    <li>Купить квартиру</li>
-                    <li>Купить комнату</li>
-                    <li>Выселить бомжа Виталика</li>
-                    <li>Оставить наследство</li>
+                    <li>
+                        <a href="#">Купить квартиру</a>
+                    </li>
+                    <li>
+                        <a href="#">Купить комнату</a>
+                    </li>
+                    <li>
+                        <a href="#">Выселить бомжа Виталика</a>
+                    </li>
+                    <li>
+                        <a href="#">Оставить наследство</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </header>
     <main>
         <div class="main-wrapper">
-            <nav>
+            <nav class="breadcrumbs">
                 <a href="index.html">Главная</a>
                 <a href="#">Вход и регистрация</a>
             </nav>
@@ -51,18 +59,22 @@
                     <h1>Хотите гарантированно получить одобрение банка на ипотеку?</h1>
                     <p>Оставьте заявку, и мы подберем лучшее предложение. Это бесплатно.</p>
                     <form action="" method="get">
-                        <label for="name">Ваше имя</label>
-                        <input type="text" id="name">
-                        <label for="phone">Номер телефона</label>
-                        <input type="text" id="phone">
-                        <input type="checkbox" name="" id="agreement">
-                        <label for="agreement">Даю согласие на обработку моих персональных данных</label>
+                        <div class="field-wrap">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="field-wrap">
+                            <label for="phone">Номер телефона</label>
+                            <input type="text" id="phone" required>
+                        </div>
+                        <input type="checkbox" name="agreement" id="agreement" required>
+                        <label class="check-input" for="agreement">Даю согласие на обработку моих персональных данных</label>
                         <button class="btn-link">Отправить</button>
                     </form>
                     <ul class="triggers">
                         <li>
                             <span>92%</span>
-                            <p>92% положительных решений</p>
+                            <p>положительных решений</p>
                         </li>
                         <li>
                             <span>Все банки</span>
@@ -150,31 +162,31 @@
                         <div class="col-wrap">
                             <div class="field-wrap">
                                 <label for="email">Электронная почта</label>
-                                <input type="email" id="email">
+                                <input type="email" id="email" required>
                             </div>
                             <div class="field-wrap">
                                 <label for="size">Размер кредита (руб)</label>
-                                <input type="number" id="size">
+                                <input type="number" id="size" required>
                             </div>
                             <div class="field-wrap">
-                                <input type="checkbox" name="" id="agreement">
-                                <label for="agreement">Даю согласие на обработку моих персональных данных</label>
+                                <input type="checkbox" name="" id="agreement" required>
+                                <label class="check-input" for="agreement">Даю согласие на обработку моих персональных данных</label>
                             </div>
                         </div>
                         <div class="col-wrap">
                             <div class="field-wrap">
                                 <label for="phone">Номер телефона</label>
-                                <input type="tel" id="phone">
+                                <input type="tel" id="phone" required>
                             </div>
                             <div class="field-wrap">
                                 <label for="year">Срок (лет)</label>
-                                <input type="number" id="year">
+                                <input type="number" id="year" required>
                             </div>
                             <div class="field-wrap">
                                 <label for="percent">Ставка (%)</label>
-                                <input type="number" id="percent">
+                                <input type="number" id="percent" required>
                             </div>
-                            <button>Рассчитать</button>
+                            <button class="btn-link">Рассчитать</button>
                         </div>
                     </form>
                 </div>

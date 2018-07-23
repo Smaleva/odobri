@@ -1,7 +1,208 @@
+@charset "UTF-8";
 @font-face {
-    font-family: "Museo";
-    src: url("/fonts/Museo-Sans-Cyr/MuseoSansCyrl.otf");
-    /*src: url("./fonts/Museo-Sans-Cyr/MuseoSansCyrl_0.otf");
-    src: url("./fonts/Museo-Sans-Cyr/MuseoSansCyrl_1.otf");
-    src: url("./fonts/Museo-Sans-Cyr/MuseoSansCyrl_2.otf");*/
-   }
+  font-family: "Museo";
+  src: url("./fonts/Museo-Sans-Cyr/MuseoSansCyrl.otf");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: "Museo", sans-serif;
+  font-size: 14px;
+  background: #f5f6fa;
+}
+body .main-wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  color: #173342;
+}
+body h1,
+body h2 {
+  font-size: 40px;
+  font-weight: 100;
+  line-height: 1.15;
+}
+body h3,
+body h4 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2222222222;
+}
+body h5 {
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1.1875;
+}
+body p {
+  color: #5c707a;
+}
+body a {
+  text-decoration: none;
+  color: #5c707a;
+  display: inline-block;
+}
+body input[type=checkbox] {
+  display: none;
+}
+body .check-input {
+  position: relative;
+  padding: 0 4%;
+  cursor: pointer;
+}
+body .check-input::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 1px solid #9da9af;
+  border-radius: 10%;
+  position: absolute;
+  left: 0;
+}
+body .check-input:hover::before {
+  border-color: #56ccf2;
+}
+body .flex, body .triggers, body header .main-wrapper,
+body .footer,
+body .opportunity-block,
+body .advantages-row {
+  display: flex;
+}
+body header .main-wrapper,
+body .footer,
+body .opportunity-block,
+body .advantages-row {
+  justify-content: space-between;
+  align-items: center;
+  min-height: 78px;
+}
+body header {
+  background: #ffffff;
+  border-bottom: 1px solid #c9d0d3;
+}
+body header .center-menu a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #5c707a;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 0 5px;
+  display: inline-block;
+}
+body header .right-menu a {
+  color: #5c707a;
+  display: inline-block;
+}
+body header .right-menu .lk-link {
+  position: relative;
+  padding: 15% 0;
+}
+body header .right-menu .lk-link::after {
+  content: "›";
+  color: inherit;
+  transform: rotate(90deg);
+  position: absolute;
+  width: 12px;
+  height: 7px;
+  top: 50%;
+  margin: 0 5%;
+}
+body header .right-menu .lk-link:hover + .submenu {
+  display: block;
+}
+body header .right-menu .submenu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  background: #fff;
+  z-index: 1;
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  min-width: 310px;
+  min-height: 192px;
+  box-shadow: 0px 4px 12px 0px rgba(92, 112, 122, 0.3);
+}
+body header .right-menu .submenu li a {
+  padding: 17px 30px;
+}
+body main .breadcrumbs {
+  margin: 14px 0;
+}
+body main .breadcrumbs a {
+  margin-right: 14px;
+  position: relative;
+  color: #173342;
+}
+body main .breadcrumbs a::after {
+  content: "›";
+  position: absolute;
+  margin: 0 13%;
+}
+body main .breadcrumbs a:last-child::after {
+  content: "";
+}
+body main .btn-link {
+  display: inline-block;
+  background: #56ccf2;
+  color: #ffffff;
+  border: 0;
+  width: 200px;
+  height: 56px;
+  text-transform: uppercase;
+  border-radius: 4%;
+}
+body main .field-wrap {
+  width: 47%;
+  display: inline-block;
+  margin: 0 15px 40px 0;
+}
+body main .field-wrap label {
+  position: absolute;
+}
+body main .field-wrap input {
+  position: relative;
+  background: transparent;
+  border: 0;
+  width: 100%;
+  font-size: 18px;
+  color: #c9d0d3;
+  border-bottom: 1px solid #c9d0d3;
+}
+body main .main-banner {
+  background: url("../img/main.jpg") left no-repeat;
+  min-height: 570px;
+  position: relative;
+}
+body main .main-banner .info-block {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 55%;
+}
+body main .main-banner .info-block form {
+  position: relative;
+}
+body main .main-banner .info-block form .btn-link {
+  position: absolute;
+  left: 0;
+  transform: translate(0, 50%);
+}
+body .triggers {
+  list-style: none;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */
