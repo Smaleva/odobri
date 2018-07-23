@@ -155,7 +155,7 @@ body main .breadcrumbs a::after {
 body main .breadcrumbs a:last-child::after {
   content: "";
 }
-body main .btn-link {
+body main .btn {
   display: inline-block;
   background: #56ccf2;
   color: #ffffff;
@@ -203,7 +203,7 @@ body main .main-banner .info-block {
 body main .main-banner .info-block form {
   position: relative;
 }
-body main .main-banner .info-block form .btn-link {
+body main .main-banner .info-block form .btn {
   position: absolute;
   left: 0;
   transform: translate(0, 50%);
@@ -224,6 +224,55 @@ body main .main-banner .info-block .triggers li .heading-list {
   color: #173342;
   font-weight: bold;
   font-size: 18px;
+}
+body main .opportunity-block {
+  padding: 38px 20px;
+}
+body main .opportunity-block .opportunity-item {
+  max-width: 330px;
+  min-height: 590px;
+  padding: 20px;
+}
+body main .opportunity-block .opportunity-item:hover {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 12px 0px rgba(92, 112, 122, 0.3);
+  border-radius: 2%;
+  cursor: pointer;
+}
+body main .opportunity-block .opportunity-item .opportunity-image {
+  position: relative;
+}
+body main .opportunity-block .opportunity-item .opportunity-image h3 {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  line-height: 1.2222222222;
+}
+body main .opportunity-block .opportunity-item ul {
+  list-style: none;
+  padding: 0;
+}
+body main .opportunity-block .opportunity-item ul li {
+  line-height: 1.5714285714;
+  position: relative;
+  padding: 0 0 15px 34px;
+}
+body main .opportunity-block .opportunity-item ul li::before {
+  content: "✓";
+  color: #b1d559;
+  position: absolute;
+  left: 3%;
+}
+body main .opportunity-block .opportunity-item .btn-link {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.625;
+  width: 100%;
+  border: 1px solid #5c707a;
+  border-radius: 6px;
+  max-height: 54px;
+  padding: 5% 0;
 }
 
 /*# sourceMappingURL=style.css.map */

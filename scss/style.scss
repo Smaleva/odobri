@@ -13,6 +13,7 @@ $color3: #5c707a;
 $colorH: #173342;
 $btn_color: #56ccf2;
 $btn_color1: #39add2;
+$li_color: #b1d559;
 $fontSize: 40px;
 $fontSizeStep: 8px;
 $fz18: 18px;
@@ -182,7 +183,7 @@ body {
                 }
             }
         }
-        .btn-link {
+        .btn {
             display: inline-block;
             background: #56ccf2;
             color: #ffffff;
@@ -231,7 +232,7 @@ body {
                 width: 55%;
                 form {
                     position: relative;
-                    .btn-link {
+                    .btn {
                         position: absolute;
                         left: 0;
                         transform: translate(0, 50%);
@@ -256,6 +257,55 @@ body {
                             }
                         }
                     }
+                }
+            }
+        }
+        .opportunity-block {
+            padding: 38px 20px;
+            .opportunity-item {
+                max-width: 330px;
+                min-height: 590px;
+                padding: 20px;
+                &:hover {
+                    background-color: $back1;
+                    box-shadow: $b_shadow_back;
+                    border-radius: 2%;
+                    cursor: pointer;
+                }
+                .opportunity-image {
+                    position: relative;
+                    h3 {
+                        position: absolute;
+                        bottom: 0;
+                        margin: 0;
+                        line-height: (22px/18px);
+                    }
+                }
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    li {
+                        line-height: (22px/14px);
+                        position: relative;
+                        padding: 0 0 15px 34px;
+                        &::before {
+                            content: ("✓");
+                            color: $li_color;
+                            position: absolute;
+                            left: 3%;
+                        }
+                    }
+                }
+                .btn-link {
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-size: $fz18 - 2px;
+                    line-height: (26px/16px);
+                    width: 100%;
+                    border: 1px solid $color3;
+                    border-radius: 6px;
+                    max-height: 54px;
+                    padding: 5% 0;
                 }
             }
         }
