@@ -36,13 +36,16 @@ body h2 {
 body h3,
 body h4 {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1.2222222222;
 }
 body h5 {
   font-size: 32px;
   font-weight: 300;
   line-height: 1.1875;
+}
+body h2, body h3 {
+  text-align: center;
 }
 body p {
   color: #5c707a;
@@ -72,7 +75,7 @@ body .check-input::before {
 body .check-input:hover::before {
   border-color: #56ccf2;
 }
-body .flex, body .triggers, body header .main-wrapper,
+body .flex, body main .main-banner .info-block .triggers, body header .main-wrapper,
 body .footer,
 body .opportunity-block,
 body .advantages-row {
@@ -92,7 +95,7 @@ body header {
 }
 body header .center-menu a {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: bold;
   color: #5c707a;
   text-transform: uppercase;
   padding: 10px;
@@ -161,6 +164,9 @@ body main .btn-link {
   height: 56px;
   text-transform: uppercase;
   border-radius: 4%;
+  box-shadow: 0px 8px 24px 0px rgba(86, 204, 242, 0.25);
+  cursor: pointer;
+  font-size: 18px;
 }
 body main .field-wrap {
   width: 47%;
@@ -169,6 +175,9 @@ body main .field-wrap {
 }
 body main .field-wrap label {
   position: absolute;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3333333333;
 }
 body main .field-wrap input {
   position: relative;
@@ -199,10 +208,22 @@ body main .main-banner .info-block form .btn-link {
   left: 0;
   transform: translate(0, 50%);
 }
-body .triggers {
+body main .main-banner .info-block .triggers {
   list-style: none;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+  position: absolute;
+  width: 50%;
+  right: 0;
+}
+body main .main-banner .info-block .triggers li {
+  max-width: 166px;
+}
+body main .main-banner .info-block .triggers li .heading-list {
+  color: #173342;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=style.css.map */
