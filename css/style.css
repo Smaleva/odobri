@@ -44,12 +44,17 @@ body h5 {
   font-weight: 300;
   line-height: 1.1875;
 }
+body h2 {
+  margin: 6% 0 3%;
+  letter-spacing: 1px;
+}
 body h2,
 body h3 {
   text-align: center;
 }
 body p {
   color: #5c707a;
+  font-size: 18px;
 }
 body a {
   text-decoration: none;
@@ -63,6 +68,7 @@ body .check-input {
   position: relative;
   padding: 0 4%;
   cursor: pointer;
+  letter-spacing: 0.25px;
 }
 body .check-input::before {
   content: "";
@@ -78,7 +84,7 @@ body .check-input:hover::before {
 }
 body .flex, body main .calc-wrapper .calc .row-wrap, main .calc-wrapper .calc body .row-wrap, body main .calc-wrapper .calc .col-wrap, main .calc-wrapper .calc body .col-wrap, body main .calc-wrapper .calc, main .calc-wrapper body .calc, body main .calc-wrapper, main body .calc-wrapper, body main .advantages-row, main body .advantages-row,
 body main .opportunity-block,
-main body .opportunity-block, body main .main-banner .info-block .triggers, main .main-banner .info-block body .triggers, body header .left-menu, header body .left-menu, body header .main-wrapper,
+main body .opportunity-block, body main .main-banner .info-block .triggers, main .main-banner .info-block body .triggers, body main .main-banner, main body .main-banner, body header .left-menu, header body .left-menu, body header .main-wrapper,
 body .footer {
   display: flex;
 }
@@ -89,7 +95,7 @@ body header .main-wrapper,
 body .footer {
   justify-content: space-between;
   align-items: center;
-  min-height: 78px;
+  min-height: 77px;
 }
 
 header {
@@ -99,14 +105,14 @@ header {
 header .left-menu {
   align-items: center;
 }
-header .left-menu .logo img {
-  zoom: 0.7;
+header .left-menu .logo {
+  margin-bottom: 2%;
 }
 header .left-menu .burger-menu {
   position: relative;
   width: 80px;
   height: 77px;
-  margin: 0 3% 0 0;
+  margin: 0 11.1% 0 0;
 }
 header .left-menu .menu-btn {
   display: block;
@@ -135,10 +141,10 @@ header .left-menu .menu-btn span::after {
   transition: 0.2s;
 }
 header .left-menu .menu-btn span::before {
-  margin: 30% 0 0;
+  margin: 40% 0 0;
 }
 header .left-menu .menu-btn span::after {
-  margin: -30% 0 0;
+  margin: -40% 0 0;
 }
 header .left-menu .menu-btn_active span {
   height: 0;
@@ -166,6 +172,9 @@ header .left-menu .nav .nav-item {
   width: 100%;
   padding: 5%;
 }
+header .center-menu {
+  flex-grow: 0.5;
+}
 @media screen and (max-width: 600px) {
   header .center-menu {
     display: none;
@@ -176,9 +185,10 @@ header .center-menu a {
   font-weight: bold;
   color: #5c707a;
   text-transform: uppercase;
-  padding: 10px;
-  margin: 0 5px;
   display: inline-block;
+  padding: 15px 9px;
+  margin: 2px 0 0 10px;
+  letter-spacing: 0.25px;
 }
 header .right-menu {
   position: relative;
@@ -225,23 +235,25 @@ header .right-menu .submenu li a {
 }
 
 main .breadcrumbs {
-  margin: 14px 0;
+  margin: 1% 0;
 }
 main .breadcrumbs a {
-  margin-right: 14px;
+  margin-right: 3%;
   position: relative;
   color: #173342;
+  font-size: 12px;
 }
 main .breadcrumbs a::after {
   content: "›";
   position: absolute;
-  margin: 0 13%;
+  margin: 0 43%;
 }
 main .breadcrumbs a:last-child::after {
   content: "";
 }
 main h1 {
-  margin-top: 0;
+  margin-top: 14%;
+  letter-spacing: 0.75px;
 }
 main .btn {
   display: inline-block;
@@ -271,15 +283,17 @@ main .field-wrap:last-child {
 }
 main .field-wrap label {
   position: absolute;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.3333333333;
+  letter-spacing: 0.25px;
 }
 main .field-wrap input {
   position: relative;
   background: transparent;
   border: 0;
   width: 100%;
+  min-height: 35px;
   font-size: 18px;
   color: #c9d0d3;
   border-bottom: 1px solid #c9d0d3;
@@ -298,25 +312,24 @@ main .mob-visible img {
 main .main-banner {
   background: url("../img/main.jpg") left no-repeat;
   min-height: 570px;
-  position: relative;
+  justify-content: flex-end;
 }
 @media screen and (max-width: 600px) {
   main .main-banner {
     background: none;
   }
 }
+main .main-banner p {
+  margin-bottom: 6%;
+}
 main .main-banner .info-block {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(0, -50%);
-  width: 55%;
+  position: relative;
+  min-height: 375px;
+  width: 57%;
 }
 @media screen and (max-width: 600px) {
   main .main-banner .info-block {
     width: 100%;
-    position: unset;
-    transform: none;
   }
 }
 main .main-banner .info-block form {
@@ -325,7 +338,7 @@ main .main-banner .info-block form {
 main .main-banner .info-block form .btn {
   position: absolute;
   left: 0;
-  transform: translate(0, 50%);
+  transform: translate(-2%, 100%);
 }
 main .main-banner .info-block .triggers {
   list-style: none;
@@ -333,7 +346,8 @@ main .main-banner .info-block .triggers {
   align-items: flex-start;
   padding: 0;
   position: absolute;
-  width: 50%;
+  width: 55%;
+  margin-top: 6%;
   right: 0;
 }
 @media screen and (max-width: 600px) {
@@ -344,11 +358,37 @@ main .main-banner .info-block .triggers {
 }
 main .main-banner .info-block .triggers li {
   max-width: 166px;
+  position: relative;
 }
 main .main-banner .info-block .triggers li .heading-list {
   color: #173342;
+  letter-spacing: 0.25px;
+  position: relative;
   font-weight: bold;
   font-size: 18px;
+}
+main .main-banner .info-block .triggers li p {
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  margin-top: 3%;
+}
+main .main-banner .info-block .triggers li:first-child::before {
+  content: "";
+  top: 0;
+  left: -20%;
+  position: absolute;
+  background: url("../img/sprites.png") -53px 0 no-repeat;
+  width: 23px;
+  height: 18px;
+}
+main .main-banner .info-block .triggers li:last-child::before {
+  content: "";
+  top: 0;
+  left: -20%;
+  position: absolute;
+  background: url("../img/sprites.png") 0 0 no-repeat;
+  width: 25px;
+  height: 18px;
 }
 main .opportunity-block {
   padding: 0 20px;
@@ -361,7 +401,7 @@ main .opportunity-block .opportunity-item {
 main .opportunity-block .opportunity-item:hover {
   background-color: #ffffff;
   box-shadow: 0px 4px 12px 0px rgba(92, 112, 122, 0.3);
-  border-radius: 4%;
+  border-radius: 6px;
   cursor: pointer;
 }
 main .opportunity-block .opportunity-item:hover .btn-link {
@@ -375,15 +415,19 @@ main .opportunity-block .opportunity-item .opportunity-image {
 }
 main .opportunity-block .opportunity-item .opportunity-image h3 {
   position: absolute;
-  bottom: 0;
   margin: 0;
   line-height: 1.2222222222;
+  letter-spacing: 0.8px;
+  bottom: 0;
+  transform: translate(0, 30%);
 }
 main .opportunity-block .opportunity-item .btn-link {
   text-align: center;
   text-transform: uppercase;
   font-size: 16px;
+  font-weight: 800;
   line-height: 1.625;
+  letter-spacing: 0.85px;
   width: 100%;
   border: 1px solid #5c707a;
   border-radius: 6px;
@@ -393,17 +437,23 @@ main .opportunity-block .opportunity-item .btn-link {
 main .opportunity-list, main .privilege-wrapper .privilege-list {
   list-style: none;
   padding: 0;
+  margin: 10% 0 6%;
 }
 main .opportunity-list li, main .privilege-wrapper .privilege-list li {
   line-height: 1.5714285714;
   position: relative;
-  padding: 0 0 15px 34px;
+  padding: 0 0 8px 33px;
+  letter-spacing: 0.2px;
 }
 main .opportunity-list li::before, main .privilege-wrapper .privilege-list li::before {
   content: "✓";
   color: #b1d559;
   position: absolute;
-  left: 3%;
+  left: 2%;
+  transform: rotate(20deg);
+}
+main .advantages-wrapper h2 {
+  margin: 6.5% 0 4.5%;
 }
 main .advantages-row,
 main .opportunity-block {
@@ -420,7 +470,7 @@ main .advantages-row .advantages-item,
 main .opportunity-block .advantages-item {
   padding-left: 69px;
   position: relative;
-  width: 33.333333%;
+  width: 32%;
 }
 @media screen and (max-width: 600px) {
   main .advantages-row .advantages-item,
@@ -430,54 +480,70 @@ main .opportunity-block .advantages-item {
 }
 main .advantages-row .advantages-item h4,
 main .opportunity-block .advantages-item h4 {
-  margin: 0 0 20px;
+  margin: 0;
+}
+main .advantages-row .advantages-item p,
+main .opportunity-block .advantages-item p {
+  font-size: 15px;
+  line-height: 1.4666666667;
 }
 main .advantages-row .advantages-item:first-child,
 main .opportunity-block .advantages-item:first-child {
-  background: url("../img/why1.png") no-repeat;
+  background: url("../img/why1.png") 0 2% no-repeat;
 }
 main .advantages-row .advantages-item:nth-child(2n),
 main .opportunity-block .advantages-item:nth-child(2n) {
-  background: url("../img/why2.png") no-repeat;
+  background: url("../img/why2.png") 1% 0 no-repeat;
 }
 main .advantages-row .advantages-item:nth-child(3n),
 main .opportunity-block .advantages-item:nth-child(3n) {
-  background: url("../img/why3.png") no-repeat;
+  background: url("../img/why3.png") 1% 1% no-repeat;
 }
 main .advantages-row:last-child {
   justify-content: center;
+  margin-top: 3%;
+}
+main .advantages-row:last-child .advantages-item {
+  width: 32.5%;
 }
 main .advantages-row:last-child .advantages-item:first-child {
-  background: url("../img/why4.png") no-repeat;
+  background: url("../img/why4.png") 0 5% no-repeat;
 }
 main .advantages-row:last-child .advantages-item:last-child {
-  background: url("../img/why5.png") no-repeat;
+  background: url("../img/why5.png") 4% 4% no-repeat;
 }
 main .calc-wrapper {
   background: url("../img/backf.jpg") no-repeat;
   max-width: 970px;
   min-height: 510px;
-  margin: 0 auto;
+  margin: 8.8% auto 8%;
   justify-content: flex-end;
-  align-items: center;
+  box-shadow: 6px 2px 20px 20px rgba(225, 231, 244, 0.25);
+  border-radius: 6px;
 }
 main .calc-wrapper .calc-block {
   max-height: 386px;
-  max-width: 510px;
+  width: 59%;
 }
 main .calc-wrapper .calc-block h5 {
-  margin: 50px;
+  margin: 13% 15% 7%;
   margin-left: 0;
+  letter-spacing: 1px;
 }
 main .calc-wrapper .calc .col-wrap {
   flex-direction: column;
   flex-wrap: wrap;
-  width: 48%;
-  margin-right: 5%;
+  width: 42%;
+  margin-right: 6%;
 }
 main .calc-wrapper .calc .col-wrap .field-wrap {
   width: 100%;
   position: relative;
+}
+main .calc-wrapper .calc .col-wrap .field-wrap label {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.25px;
 }
 main .calc-wrapper .calc .check-input {
   font-size: 14px;
@@ -497,22 +563,85 @@ main .privilege-wrapper .privilege-list h6 {
   font-size: 20px;
   font-weight: bold;
   line-height: 1.1;
+  letter-spacing: 0.25px;
   margin: 0;
 }
+main .privilege-wrapper .privilege-list p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.375;
+  letter-spacing: 0.25px;
+}
+main .privilege-wrapper .privilege-list li {
+  padding: 0 0 4% 9%;
+}
 main .privilege-wrapper .privilege-list li::before {
-  zoom: 1.5;
-  left: 0;
+  zoom: 2;
+  left: -2%;
   top: 0;
   line-height: 1;
 }
 
+footer {
+  background: url("../img/backfooter.jpg") center no-repeat;
+  background-size: cover;
+  min-height: 213px;
+  height: 100%;
+  border-top: 1px solid #c9d0d3;
+}
 footer p {
   text-align: center;
+  font-size: 12px;
+}
+footer .footer {
+  min-height: inherit;
 }
 @media screen and (max-width: 600px) {
   footer .footer {
     flex-direction: column;
   }
+}
+footer .footer .social-media a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+}
+footer .footer .social-media a:first-child {
+  background: #4d76a1 url("../img/sprites.png") -91px -38px no-repeat;
+}
+footer .footer .social-media a:nth-child(2n) {
+  background: #c33b22 url("../img/sprites.png") -42px -38px no-repeat;
+}
+footer .footer .social-media a:last-child {
+  background: #4267b2 url("../img/sprites.png") 13px -39px no-repeat;
+}
+footer .footer .contact-block a {
+  display: block;
+  letter-spacing: 0.15px;
+}
+footer .footer .contact-block a:first-child {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 0.9090909091;
+}
+footer .footer .contact-block a:last-child {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4285714286;
+  color: #39add2;
+  position: relative;
+  padding-left: 12%;
+}
+footer .footer .contact-block a:last-child::before {
+  content: "";
+  background: url("../img/sprites.png") -100px 0 no-repeat;
+  width: 17px;
+  height: 11px;
+  position: absolute;
+  top: 21%;
+  left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
