@@ -459,9 +459,11 @@ main .calc-wrapper {
   min-height: 510px;
   margin: 0 auto;
   justify-content: flex-end;
+  align-items: center;
 }
 main .calc-wrapper .calc-block {
-  width: 60%;
+  max-height: 386px;
+  max-width: 510px;
 }
 main .calc-wrapper .calc-block h5 {
   margin: 50px;
