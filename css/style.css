@@ -64,6 +64,18 @@ body a {
 body input[type=checkbox] {
   display: none;
 }
+body input[type=checkbox]:checked + .check-input::after {
+  background: #56ccf2;
+  content: "✓";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 10%;
+  color: #ffffff;
+  left: 0;
+  text-align: center;
+  padding-top: 2px;
+}
 body .check-input {
   position: relative;
   padding: 0 4%;
@@ -81,6 +93,11 @@ body .check-input::before {
 }
 body .check-input:hover::before {
   border-color: #56ccf2;
+}
+@media screen and (max-width: 600px) {
+  body .check-input {
+    padding: 0 0 0 8%;
+  }
 }
 body .flex, body main .calc-wrapper .calc .row-wrap, main .calc-wrapper .calc body .row-wrap, body main .calc-wrapper .calc .col-wrap, main .calc-wrapper .calc body .col-wrap, body main .calc-wrapper .calc, main .calc-wrapper body .calc, body main .calc-wrapper, main body .calc-wrapper, body main .advantages-row, main body .advantages-row,
 body main .opportunity-block,
@@ -107,6 +124,11 @@ header .left-menu {
 }
 header .left-menu .logo {
   margin-bottom: 2%;
+}
+@media screen and (max-width: 600px) {
+  header .left-menu .logo {
+    zoom: 0.5;
+  }
 }
 header .left-menu .burger-menu {
   position: relative;
@@ -255,6 +277,12 @@ main h1 {
   margin-top: 14%;
   letter-spacing: 0.75px;
 }
+@media screen and (max-width: 600px) {
+  main h1 {
+    margin-top: 1%;
+    font-size: x-large;
+  }
+}
 main .btn {
   display: inline-block;
   background: #56ccf2;
@@ -320,6 +348,7 @@ main .main-banner {
 @media screen and (max-width: 600px) {
   main .main-banner {
     background: none;
+    flex-direction: column;
   }
 }
 main .main-banner p {
@@ -333,6 +362,7 @@ main .main-banner .info-block {
 @media screen and (max-width: 600px) {
   main .main-banner .info-block {
     width: 100%;
+    padding: 0 2%;
   }
 }
 main .main-banner .info-block form {
@@ -342,6 +372,16 @@ main .main-banner .info-block form .btn {
   position: absolute;
   left: 0;
   transform: translate(-2%, 100%);
+}
+@media screen and (max-width: 600px) {
+  main .main-banner .info-block form .btn {
+    transform: translate(40%, 50%);
+  }
+}
+@media screen and (max-width: 600px) {
+  main .main-banner .info-block form {
+    min-height: 260px;
+  }
 }
 main .main-banner .info-block .triggers {
   list-style: none;
@@ -467,6 +507,7 @@ main .opportunity-block {
   main .advantages-row,
 main .opportunity-block {
     flex-direction: column;
+    margin: 0 2%;
   }
 }
 main .advantages-row .advantages-item,
@@ -515,6 +556,11 @@ main .advantages-row:last-child .advantages-item:first-child {
 main .advantages-row:last-child .advantages-item:last-child {
   background: url("../img/why5.png") 4% 4% no-repeat;
 }
+@media screen and (max-width: 600px) {
+  main .advantages-row:last-child .advantages-item {
+    width: 100%;
+  }
+}
 main .calc-wrapper {
   background: url("../img/backf.jpg") no-repeat;
   max-width: 970px;
@@ -524,20 +570,50 @@ main .calc-wrapper {
   box-shadow: 6px 2px 20px 20px rgba(225, 231, 244, 0.25);
   border-radius: 6px;
 }
+@media screen and (max-width: 600px) {
+  main .calc-wrapper {
+    flex-direction: column;
+    background: none;
+    margin: 0 2%;
+    box-shadow: none;
+  }
+}
 main .calc-wrapper .calc-block {
   max-height: 386px;
   width: 59%;
+}
+@media screen and (max-width: 600px) {
+  main .calc-wrapper .calc-block {
+    width: 100%;
+    min-height: inherit;
+  }
 }
 main .calc-wrapper .calc-block h5 {
   margin: 13% 15% 7%;
   margin-left: 0;
   letter-spacing: 1px;
 }
+@media screen and (max-width: 600px) {
+  main .calc-wrapper .calc-block h5 {
+    margin: 2% 0;
+    font-size: x-large;
+  }
+}
+@media screen and (max-width: 600px) {
+  main .calc-wrapper .calc {
+    flex-direction: column;
+  }
+}
 main .calc-wrapper .calc .col-wrap {
   flex-direction: column;
   flex-wrap: wrap;
   width: 42%;
   margin-right: 6%;
+}
+@media screen and (max-width: 600px) {
+  main .calc-wrapper .calc .col-wrap {
+    width: 100%;
+  }
 }
 main .calc-wrapper .calc .col-wrap .field-wrap {
   width: 100%;
@@ -547,6 +623,10 @@ main .calc-wrapper .calc .col-wrap .field-wrap label {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.25px;
+}
+main .calc-wrapper .calc .col-wrap .field-wrap label::after {
+  padding: 0;
+  top: 0;
 }
 main .calc-wrapper .calc .check-input {
   font-size: 14px;
