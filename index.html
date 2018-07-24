@@ -70,14 +70,14 @@
                 <div class="info-block">
                     <h1>Хотите гарантированно получить одобрение банка на ипотеку?</h1>
                     <p>Оставьте заявку, и мы подберем лучшее предложение. Это бесплатно.</p>
-                    <form action="" method="get">
+                    <form action="/index.html" method="get" name="registration">
                         <div class="field-wrap">
                             <label for="name">Ваше имя</label>
-                            <input type="text" id="name" required>
+                            <input type="text" id="name" pattern="[A-Za-zА-Яа-яЁё]{3,}" required>
                         </div>
                         <div class="field-wrap">
                             <label for="phone">Номер телефона</label>
-                            <input type="text" id="phone" required>
+                            <input type="tel" id="phone" pattern="8-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
                         </div>
                         <input type="checkbox" name="agreement" id="agreement" required>
                         <label class="check-input" for="agreement">Даю согласие на обработку моих персональных данных</label>
@@ -179,15 +179,15 @@
             <section class="calc-wrapper">
                 <div class="calc-block">
                     <h5>Посчитайте сколько вы сэкономите на кредите, с нашей помощью</h5>
-                    <form action="" class="calc">
+                    <form name="calc" action="" method="get" class="calc">
                         <div class="col-wrap">
                             <div class="field-wrap">
                                 <label for="email">Электронная почта</label>
-                                <input type="email" id="email" required>
+                                <input type="email" id="email" pattern="^[a-zA-Z[0-9]]+$" required>
                             </div>
                             <div class="field-wrap">
                                 <label for="size">Размер кредита (руб)</label>
-                                <input type="number" id="size" required>
+                                <input type="number" id="size" pattern="[0-9]{5,10}" required>
                             </div>
                             <div class="field-wrap">
                                 <input type="checkbox" name="" id="agreement" required>
@@ -197,16 +197,16 @@
                         <div class="col-wrap">
                             <div class="field-wrap">
                                 <label for="phone">Номер телефона</label>
-                                <input type="tel" id="phone" required>
+                                <input type="tel" id="phone" pattern="8-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
                             </div>
                             <div class="row-wrap">
                                 <div class="field-wrap">
                                     <label for="year">Срок (лет)</label>
-                                    <input type="number" id="year" required>
+                                    <input type="number" id="year" pattern="[0-9]{,2}" required>
                                 </div>
                                 <div class="field-wrap">
                                     <label for="percent">Ставка (%)</label>
-                                    <input type="number" id="percent" required>
+                                    <input type="number" id="percent" pattern="[0-9]{,2}" required>
                                 </div>
                             </div>
                             <button class="btn">Рассчитать</button>

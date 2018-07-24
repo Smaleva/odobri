@@ -326,6 +326,7 @@ main {
             font-size: $fz18;
             color: $color1;
             border-bottom: 1px solid $color1;
+            &:focus {outline: none;}
         }
     }
     .mob-visible {
