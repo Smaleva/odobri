@@ -125,6 +125,7 @@ body {
             border-radius: 10%;
             position: absolute;
             left: 0;
+            top: 0;
         }
         &:hover::before,
         &:focus::before {
@@ -369,13 +370,19 @@ main {
             border: 0;
             width: 100%;
             min-height: 35px;
-            font-size: $fz18;
-            color: $color1;
+            font-size: $fz18 - 2px;
+            color: $color3;
             border-bottom: 1px solid $color1;
             &:focus {
-                //outline: none;
+                outline: 0;
+                border-bottom: 1px solid $btn_color;
             }
         }
+    }
+    .active {
+        font-size: $fz18 - 6px;
+        top: -25%;
+        color: $btn_color;
     }
     .mob-visible {
         display: none;

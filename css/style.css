@@ -93,6 +93,7 @@ body .check-input::before {
   border-radius: 10%;
   position: absolute;
   left: 0;
+  top: 0;
 }
 body .check-input:hover::before, body .check-input:focus::before {
   border-color: #56ccf2;
@@ -351,9 +352,18 @@ main .field-wrap input {
   border: 0;
   width: 100%;
   min-height: 35px;
-  font-size: 18px;
-  color: #c9d0d3;
+  font-size: 16px;
+  color: #5c707a;
   border-bottom: 1px solid #c9d0d3;
+}
+main .field-wrap input:focus {
+  outline: 0;
+  border-bottom: 1px solid #56ccf2;
+}
+main .active {
+  font-size: 12px;
+  top: -25%;
+  color: #56ccf2;
 }
 main .mob-visible {
   display: none;
