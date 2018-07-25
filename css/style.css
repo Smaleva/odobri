@@ -62,6 +62,8 @@ body a {
   display: inline-block;
 }
 body input[type=checkbox] {
+  visibility: hidden;
+  opacity: 0;
   display: none;
 }
 body input[type=checkbox]:checked + .check-input::after {
@@ -81,6 +83,7 @@ body .check-input {
   padding: 0 4%;
   cursor: pointer;
   letter-spacing: 0.25px;
+  font-size: 14px;
 }
 body .check-input::before {
   content: "";
@@ -91,7 +94,7 @@ body .check-input::before {
   position: absolute;
   left: 0;
 }
-body .check-input:hover::before {
+body .check-input:hover::before, body .check-input:focus::before {
   border-color: #56ccf2;
 }
 @media screen and (max-width: 600px) {
@@ -186,6 +189,8 @@ header .left-menu .nav {
   background: #fff;
   margin: 2% 0;
   min-width: 300px;
+  -moz-box-shadow: 0px 4px 12px 0px rgba(92, 112, 122, 0.3);
+  -webkit-box-shadow: 0px 4px 12px 0px rgba(92, 112, 122, 0.3);
   box-shadow: 0px 4px 12px 0px rgba(92, 112, 122, 0.3);
   position: absolute;
   z-index: 1;
@@ -193,6 +198,10 @@ header .left-menu .nav {
 header .left-menu .nav .nav-item {
   width: 100%;
   padding: 5%;
+}
+header .left-menu .nav .nav-item:hover {
+  background: #56ccf2;
+  color: #ffffff;
 }
 header .center-menu {
   flex-grow: 0.5;
@@ -249,11 +258,17 @@ header .right-menu .submenu {
   margin: 10% 0;
   min-width: 310px;
   min-height: 192px;
+  -moz-box-shadow: 0px 4px 12px 0px rgba(92, 112, 122, 0.3);
+  -webkit-box-shadow: 0px 4px 12px 0px rgba(92, 112, 122, 0.3);
   box-shadow: 0px 4px 12px 0px rgba(92, 112, 122, 0.3);
 }
 header .right-menu .submenu li a {
   padding: 17px 30px;
   width: 100%;
+}
+header .right-menu .submenu li a:hover {
+  background: #56ccf2;
+  color: #ffffff;
 }
 
 main .breadcrumbs {
@@ -325,9 +340,6 @@ main .field-wrap input {
   font-size: 18px;
   color: #c9d0d3;
   border-bottom: 1px solid #c9d0d3;
-}
-main .field-wrap input:focus {
-  outline: none;
 }
 main .mob-visible {
   display: none;
@@ -443,6 +455,8 @@ main .opportunity-block .opportunity-item {
 }
 main .opportunity-block .opportunity-item:hover {
   background-color: #ffffff;
+  -moz-box-shadow: 0px 4px 12px 0px rgba(92, 112, 122, 0.3);
+  -webkit-box-shadow: 0px 4px 12px 0px rgba(92, 112, 122, 0.3);
   box-shadow: 0px 4px 12px 0px rgba(92, 112, 122, 0.3);
   border-radius: 6px;
   cursor: pointer;
@@ -641,7 +655,7 @@ main .calc-wrapper .calc .col-wrap .field-wrap label::after {
   padding: 0;
   top: 0;
 }
-main .calc-wrapper .calc .check-input {
+main .calc-wrapper .calc .col-wrap .field-wrap label.check-input {
   font-size: 14px;
   padding: 0 0 0 10%;
 }

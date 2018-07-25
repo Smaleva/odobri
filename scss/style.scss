@@ -17,14 +17,16 @@ $li_color: #b1d559;
 $fontSize: 40px;
 $fontSizeStep: 8px;
 $fz18: 18px;
-$b_shadow_back: 0px 4px 12px 0px rgba(92,
-112,
-122,
-0.3);
 $b_shadow_btn: 0px 8px 24px 0px rgba(86,
 204,
 242,
 0.25);
+@mixin box-shadow($b_shadow_back) {
+    -moz-box-shadow: $b_shadow_back;
+    -webkit-box-shadow: $b_shadow_back;
+    box-shadow: $b_shadow_back;
+}
+
 *,
 *::before,
 *::after {
@@ -91,6 +93,8 @@ body {
         display: inline-block;
     }
     input[type=checkbox] {
+        visibility: hidden;
+        opacity: 0;
         display: none;
         &:checked+.check-input::after {
             background: $btn_color;
@@ -110,6 +114,7 @@ body {
         padding: 0 4%;
         cursor: pointer;
         letter-spacing: 0.25px;
+        font-size: $fz18 - 4px;
         &::before {
             content: "";
             width: 20px;
@@ -119,7 +124,8 @@ body {
             position: absolute;
             left: 0;
         }
-        &:hover::before {
+        &:hover::before,
+        &:focus::before {
             border-color: $btn_color;
         }
         @media screen and (max-width: 600px) {
@@ -209,12 +215,16 @@ header {
             background: #fff;
             margin: 2% 0;
             min-width: 300px;
-            box-shadow: $b_shadow_back;
+            @include box-shadow(0px 4px 12px 0px rgba(92,112,122,0.3));
             position: absolute;
             z-index: 1;
             .nav-item {
                 width: 100%;
                 padding: 5%;
+                &:hover {
+                    background: $btn_color;
+                    color: $back1;
+                }
             }
         }
     }
@@ -270,10 +280,14 @@ header {
             margin: 10% 0;
             min-width: 310px;
             min-height: 192px;
-            box-shadow: $b_shadow_back;
+            @include box-shadow(0px 4px 12px 0px rgba(92,112,122,0.3));
             li a {
                 padding: 17px 30px;
                 width: 100%;
+                &:hover {
+                    background: $btn_color;
+                    color: $back1;
+                }
             }
         }
     }
@@ -349,7 +363,7 @@ main {
             color: $color1;
             border-bottom: 1px solid $color1;
             &:focus {
-                outline: none;
+                //outline: none;
             }
         }
     }
@@ -457,7 +471,7 @@ main {
             padding: 20px;
             &:hover {
                 background-color: $back1;
-                box-shadow: $b_shadow_back;
+                @include box-shadow(0px 4px 12px 0px rgba(92,112,122,0.3));
                 border-radius: 6px;
                 cursor: pointer;
                 .btn-link {
@@ -480,9 +494,9 @@ main {
                 }
                 &::after {
                     content: "";
-                    background-image: -moz-linear-gradient( -90deg, rgba(245,246,250,0) 0%, rgb(245,246,250) 100%);
-                    background-image: -webkit-linear-gradient( -90deg, rgba(245,246,250,0) 0%, rgb(245,246,250) 100%);
-                    background-image: -ms-linear-gradient( -90deg, rgba(245,246,250,0) 0%, rgb(245,246,250) 100%);
+                    background-image: -moz-linear-gradient( -90deg, rgba(245, 246, 250, 0) 0%, rgb(245, 246, 250) 100%);
+                    background-image: -webkit-linear-gradient( -90deg, rgba(245, 246, 250, 0) 0%, rgb(245, 246, 250) 100%);
+                    background-image: -ms-linear-gradient( -90deg, rgba(245, 246, 250, 0) 0%, rgb(245, 246, 250) 100%);
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -638,12 +652,12 @@ main {
                             padding: 0;
                             top: 0;
                         }
+                        &.check-input {
+                            font-size: $fz18 - 4px;
+                            padding: 0 0 0 10%;
+                        }
                     }
                 }
-            }
-            .check-input {
-                font-size: $fz18 - 4px;
-                padding: 0 0 0 10%;
             }
             .row-wrap {
                 @extend .flex;
