@@ -113,7 +113,11 @@ body .none {
 }
 body header .main-wrapper,
 body .footer {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   min-height: 77px;
 }
@@ -123,6 +127,8 @@ header {
   border-bottom: 1px solid #c9d0d3;
 }
 header .left-menu {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 header .left-menu .logo {
@@ -185,6 +191,9 @@ header .left-menu .menu-btn_active span:after {
   transform: rotate(45deg);
 }
 header .left-menu .nav {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   background: #fff;
   margin: 2% 0;
@@ -249,6 +258,9 @@ header .right-menu .lk-link::after {
 }
 header .right-menu .submenu {
   list-style: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   padding: 0;
   background: #fff;
@@ -307,6 +319,8 @@ main .btn {
   height: 56px;
   text-transform: uppercase;
   border-radius: 4%;
+  -moz-box-shadow: 0px 8px 24px 0px rgba(86, 204, 242, 0.25);
+  -webkit-box-shadow: 0px 8px 24px 0px rgba(86, 204, 242, 0.25);
   box-shadow: 0px 8px 24px 0px rgba(86, 204, 242, 0.25);
   cursor: pointer;
   font-size: 18px;
@@ -355,11 +369,16 @@ main .mob-visible img {
 main .main-banner {
   background: url("../img/main.jpg") left no-repeat;
   min-height: 570px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 @media screen and (max-width: 600px) {
   main .main-banner {
     background: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
@@ -397,7 +416,11 @@ main .main-banner .info-block form .btn {
 }
 main .main-banner .info-block .triggers {
   list-style: none;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
   align-items: flex-start;
   padding: 0;
   position: absolute;
@@ -465,6 +488,8 @@ main .opportunity-block .opportunity-item:hover .btn-link {
   background: #56ccf2;
   color: #ffffff;
   border: 0;
+  -moz-box-shadow: 0px 8px 24px 0px rgba(86, 204, 242, 0.25);
+  -webkit-box-shadow: 0px 8px 24px 0px rgba(86, 204, 242, 0.25);
   box-shadow: 0px 8px 24px 0px rgba(86, 204, 242, 0.25);
 }
 main .opportunity-block .opportunity-item .opportunity-image {
@@ -527,12 +552,19 @@ main .advantages-wrapper h2 {
 }
 main .advantages-row,
 main .opportunity-block {
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
   align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 @media screen and (max-width: 600px) {
   main .advantages-row,
 main .opportunity-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin: 0 2%;
   }
@@ -571,6 +603,8 @@ main .opportunity-block .advantages-item:nth-child(3n) {
   background: url("../img/why3.png") 1% 1% no-repeat;
 }
 main .advantages-row:last-child {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-top: 3%;
 }
@@ -593,15 +627,24 @@ main .calc-wrapper {
   max-width: 970px;
   min-height: 510px;
   margin: 8.8% auto 8%;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
+  -moz-box-shadow: 6px 2px 20px 20px rgba(225, 231, 244, 0.25);
+  -webkit-box-shadow: 6px 2px 20px 20px rgba(225, 231, 244, 0.25);
   box-shadow: 6px 2px 20px 20px rgba(225, 231, 244, 0.25);
   border-radius: 6px;
 }
 @media screen and (max-width: 600px) {
   main .calc-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     background: none;
     margin: 0 2%;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
 }
@@ -628,11 +671,18 @@ main .calc-wrapper .calc-block h5 {
 }
 @media screen and (max-width: 600px) {
   main .calc-wrapper .calc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
 main .calc-wrapper .calc .col-wrap {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 42%;
   margin-right: 6%;
@@ -708,6 +758,9 @@ footer .footer {
 }
 @media screen and (max-width: 600px) {
   footer .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }

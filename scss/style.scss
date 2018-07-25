@@ -17,14 +17,16 @@ $li_color: #b1d559;
 $fontSize: 40px;
 $fontSizeStep: 8px;
 $fz18: 18px;
-$b_shadow_btn: 0px 8px 24px 0px rgba(86,
-204,
-242,
-0.25);
 @mixin box-shadow($b_shadow_back) {
     -moz-box-shadow: $b_shadow_back;
     -webkit-box-shadow: $b_shadow_back;
     box-shadow: $b_shadow_back;
+}
+
+@mixin align-items($align-items) {
+    -webkit-box-align: $align-items;
+    -ms-flex-align: $align-items;
+    align-items: $align-items;
 }
 
 *,
@@ -141,8 +143,10 @@ body {
     header .main-wrapper,
     .footer {
         @extend .flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
-        align-items: center;
+        @include align-items(center);
         min-height: 77px;
     }
 }
@@ -152,7 +156,7 @@ header {
     border-bottom: 1px solid $color1;
     .left-menu {
         @extend .flex;
-        align-items: center;
+        @include align-items(center);
         .logo {
             margin-bottom: 2%;
             @media screen and (max-width: 600px) {
@@ -211,11 +215,14 @@ header {
             transform: rotate(45deg);
         }
         .nav {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
             background: #fff;
             margin: 2% 0;
             min-width: 300px;
-            @include box-shadow(0px 4px 12px 0px rgba(92,112,122,0.3));
+            @include box-shadow(0px 4px 12px 0px rgba(92, 112, 122, 0.3));
             position: absolute;
             z-index: 1;
             .nav-item {
@@ -271,6 +278,9 @@ header {
         }
         .submenu {
             list-style: none;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
             padding: 0;
             background: #fff;
@@ -280,7 +290,7 @@ header {
             margin: 10% 0;
             min-width: 310px;
             min-height: 192px;
-            @include box-shadow(0px 4px 12px 0px rgba(92,112,122,0.3));
+            @include box-shadow(0px 4px 12px 0px rgba(92, 112, 122, 0.3));
             li a {
                 padding: 17px 30px;
                 width: 100%;
@@ -328,7 +338,7 @@ main {
         height: 56px;
         text-transform: uppercase;
         border-radius: 4%;
-        box-shadow: $b_shadow_btn;
+        @include box-shadow(0px 8px 24px 0px rgba(86, 204, 242, 0.25));
         cursor: pointer;
         font: {
             size: $fz18;
@@ -380,9 +390,14 @@ main {
         background: url("../img/main.jpg") left no-repeat;
         min-height: 570px;
         @extend .flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
         justify-content: flex-end;
         @media screen and (max-width: 600px) {
             background: none;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
         }
         p {
@@ -413,8 +428,10 @@ main {
             .triggers {
                 @extend .flex;
                 list-style: none;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
                 justify-content: space-between;
-                align-items: flex-start;
+                @include align-items(flex-start);
                 padding: 0;
                 position: absolute;
                 width: 55%;
@@ -471,14 +488,20 @@ main {
             padding: 20px;
             &:hover {
                 background-color: $back1;
-                @include box-shadow(0px 4px 12px 0px rgba(92,112,122,0.3));
+                @include box-shadow(0px 4px 12px 0px rgba(92,
+                112,
+                122,
+                0.3));
                 border-radius: 6px;
                 cursor: pointer;
                 .btn-link {
                     background: #56ccf2;
                     color: #ffffff;
                     border: 0;
-                    box-shadow: $b_shadow_btn;
+                    @include box-shadow(0px 8px 24px 0px rgba(86,
+                    204,
+                    242,
+                    0.25));
                 }
             }
             .opportunity-image {
@@ -548,9 +571,14 @@ main {
     .advantages-row,
     .opportunity-block {
         @extend .flex;
-        align-items: flex-start;
+        @include align-items(flex-start);
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         @media screen and (max-width: 600px) {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
             margin: 0 2%;
         }
@@ -580,6 +608,8 @@ main {
         }
     }
     .advantages-row:last-child {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         margin-top: 3%;
         .advantages-item {
@@ -601,14 +631,22 @@ main {
         min-height: 510px;
         margin: 8.8% auto 8%;
         @extend .flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
         justify-content: flex-end;
-        box-shadow: 6px 2px 20px 20px rgba(225, 231, 244, 0.25);
+        @include box-shadow(6px 2px 20px 20px rgba(225,
+        231,
+        244,
+        0.25));
         border-radius: 6px;
         @media screen and (max-width: 600px) {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
             background: none;
             margin: 0 2%;
-            box-shadow: none;
+            @include box-shadow(none);
         }
         .calc-block {
             max-height: 386px;
@@ -630,11 +668,18 @@ main {
         .calc {
             @extend .flex;
             @media screen and (max-width: 600px) {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
                 flex-direction: column;
             }
             .col-wrap {
                 @extend .flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
                 flex-direction: column;
+                -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
                 width: 42%;
                 margin-right: 6%;
@@ -716,6 +761,9 @@ footer {
     .footer {
         min-height: inherit;
         @media screen and (max-width: 600px) {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
             flex-direction: column;
         }
         .social-media a {
